@@ -1,0 +1,66 @@
+//Get All the Account Name
+// and Name and Email of Contacts associated with those account
+//from Account Object
+
+//SELECT Name, (SELECT Name,Email FROM Contacts) 
+//FROM Account
+//ORDER BY CreatedDate ASC
+
+
+//Get All the Contact Name
+// and Case Subject, Status of Cases associated with those Contact
+//from Contact Object
+
+//SELECT Name, (SELECT Subject, Status FROM Cases)
+//FROM Account
+//ORDER BY CreateDate ASC
+
+//Get All the Contact Name
+// and Book Name ,Price of  Books associated with those Contact
+//from Contact Object
+
+//SELECT Name,(SELECT Name,Price__c FROM Books__r)
+// FROM Contact 
+
+//Get the Name Of The Account if the Child contact with last Name Forbes
+//If it has child contact with Last Name Forbes
+
+//Step 1
+//SELECT AccountId FROM Contact WHERE LastName = 'Forbes' 
+
+//Step 2
+//SELECT  Name
+//FROM  Account
+//WHERE Id =     // ex:  '001Dm00000BNUqUIAX'
+
+
+//FINAL STEP
+//SELECT Name 
+//FROM  Account
+//WHERE Id IN ( SELECT AccountId FROM Contact WHERE LastName ='Forbes') 
+
+
+//Get All The Account Names if the Child Contacts Last Name Starts with SELECT  FROM 
+//Also display all the contacts along with Account Name
+
+//SELECT Name ,(SELECT FirstName, LastName FROM Contacts )
+//FROM  Account
+//WHERE Id IN ( SELECT AccountId FROM Contact WHERE LastName LIKE 'F%')
+
+
+// Get All The Account with Opportunity
+
+//Step 1
+//SELECT AccountId      // Name, Account.Name 
+//FROM Opportunity
+
+
+// This will return all the Account Name with Opportunity
+//SELECT Name
+//FROM Account
+//WHERE Id IN (  SELECT AccountId FROM Opportunity)
+
+// This will return all the Account Name without Opportunity
+SELECT Name
+FROM Account
+WHERE Id NOT IN (  SELECT AccountId FROM Opportunity)
