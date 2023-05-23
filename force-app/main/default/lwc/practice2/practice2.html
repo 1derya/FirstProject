@@ -1,0 +1,21 @@
+<template>
+  <lightning-card title="Data Binding" icon-name="custom:custom15">
+    <!-- Creating a container with this class attribute
+        so anything we put inside will not be too close to the left -->
+    <div class="slds-var-m-around_medium">
+      <p>First Name : {firstName}</p>
+      <p>Last Name : {lastName}</p>
+
+      <p>Full Name : {fullName}</p>
+
+      <lightning-input type="text" label="First Name"></lightning-input>
+      <lightning-input type="text" label="Last  Name"></lightning-input>
+
+      <lightning-button
+        label="Click me"
+        title="Click Me"
+        onclick={handleClick}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

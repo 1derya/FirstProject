@@ -9,11 +9,16 @@
 // System.debug('Hello World!');
 // System.debug('My name is ' + tempvar);
 
-List<String> heroList = new List<String>{'Superman', 'Batman', 'Spiderman', 'Iron Man', 'Wonder Woman', 'Captain America', 'Iron Man', 'Iron Man', 'Green Lantern', 'Batman'};
+// List<String> heroList = new List<String>{'Superman', 'Batman', 'Spiderman', 'Iron Man', 'Wonder Woman', 'Captain America', 'Iron Man', 'Iron Man', 'Green Lantern', 'Batman'};
 
-Integer index = 0;
-for (Integer i = 0; i < heroList.size() ; i++){
-    if (heroList.get(i) == 'Iron Man'){
-        System.debug('index is ' + i); 
-    }
-}
+// Integer index = 0;
+// for (Integer i = 0; i < heroList.size() ; i++){
+//     if (heroList.get(i) == 'Iron Man'){
+//         System.debug('index is ' + i); 
+//     }
+// }
+
+//git config --global user.name "Derya"
+
+//git config --global user.email "safiyeb70@gmail.com"
+

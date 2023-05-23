@@ -17,7 +17,22 @@ public class AsyncUtil {
        System.debug('boiling water...'); 
        
      }
+
+     @future
+    public static void updateCurrentUserRoleToCFO(){
+
+        Id userId = UserInfo.getUserId();
+        User u = [SELECT Id, FirstName, Division FROM USER 
+                    WHERE Id = :userId]; 
+        // update User role to CFO 
+        UserRole roleCFO = [SELECT Id,Name from UserRole Where Name='CFO']; 
+
+        u.UserRoleId = roleCFO.Id ; 
+        update u ; 
+
    
+   
+    }
 }
 
 /**
@@ -28,3 +43,12 @@ Here’s how Batch Apex works under the hood. Let’s say you want to process 1 
 Every transaction starts with a new set of governor limits, making it easier to ensure that your code stays within the governor execution limits.
 If one batch fails to process successfully, all other successful batch transactions aren’t rolled back.
  */
+
+
+ /**
+ The reason why sObjects can't be passed as arguments
+  to future methods is because the sObject can change 
+  between the time you call the method and the time it
+  executes. In this case, the future method gets the 
+  old sObject values and can overwrite them.
+  */
