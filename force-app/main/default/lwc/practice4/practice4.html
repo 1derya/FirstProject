@@ -1,0 +1,43 @@
+<template>
+  <lightning-card title="Data Binding 3" icon-name="utility:add">
+    <div class="slds-var-m-around_medium">
+      <lightning-input
+        type="number"
+        variant="label-inline"
+        label="First Number"
+        onchange={handleNum1Change}
+        step="any"
+        value={inputValue1}
+      ></lightning-input>
+
+      <lightning-input
+        type="number"
+        variant="label-inline"
+        label="Second Number"
+        onchange={handleNum2Change}
+        step="any"
+        value={inputValue2}
+      ></lightning-input>
+
+      <div class="slds-var-m-top_small slds-align_absolute-center">
+        <ul>
+          <li>Addition : {additionResult}</li>
+          <li>Multiplication : {multiplication}</li>
+          <li>Division :{division}</li>
+          <li>Subtraction :{subtraction}</li>
+        </ul>
+      </div>
+      
+      <div class="slds-var-m-top_small slds-align_absolute-center" >
+        <lightning-button
+          variant="brand"
+          label="Reset"
+          onclick={handleReset}
+        ></lightning-button>
+      </div>
+    </div>
+  </lightning-card>
+</template>
+
+<!-- it is because the lightning-input element with type=number by default set the incremental step value to 1. 
+ so in order to not have such restriction we can add step="any attribute and it fixed the issue-->

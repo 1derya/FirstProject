@@ -20,6 +20,9 @@ export default class Practice2 extends LightningElement {
     //since we have 
     handleClick(){
         console.log('Button is Clicked');
+        this.firstName ='Clark';
+        this.lastName  ='Kent';
+    
     }
        
 
