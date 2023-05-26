@@ -21,11 +21,13 @@ export default class Practice6 extends LightningElement {
       // check if both checkboxes are checked=true
       //so we can set the promoted to true
       
-      if (this.hired === true && this.graduated === true) {
-          this.promoted = true; 
-      } else {
-          this.promoted = false; 
-      }
+    //   if (this.hired === true && this.graduated === true) {
+    //       this.promoted = true; 
+    //   } else {
+    //       this.promoted = false; 
+    //   }
+
+    this.promoted = this.hired && this.graduate ;
 
   }
 
