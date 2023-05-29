@@ -22,7 +22,9 @@
           <p>You have Selected {selectedValue} State</p>
         </template>
         <!-- else display : Please select state in p element -->
-
+        <template lwc:else>
+            <p>Please select state</p>
+          </template>
         <!-- Conditionally display below Paragraph 
         if user selected either MD or VA -->
         <template lwc:if={isCapitalArea}>
