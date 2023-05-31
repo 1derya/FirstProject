@@ -1,7 +1,7 @@
 
 // with sharing will enforce record level sharing rules
 // without sharing will not enforce record level sharing rules
-
+ 
 public with sharing class AccountController {
 
   /**
@@ -37,6 +37,7 @@ public with sharing class AccountController {
     * @return List of Accounts in your salesforce org 
     * with AnnualRevenue Field filled up
     */
+    @AuraEnabled(cacheable=true)
    public static List<Account> getAccountWithAnnualRevenue(){
 
        // List<Account> lst = [SELECT Id,Name, AnnualRevenue 
