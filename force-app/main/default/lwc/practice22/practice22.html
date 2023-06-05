@@ -1,3 +1,5 @@
+<!--Lightning Record Form from Lightning Data Service to create record without Apex-->
+
 <template>
     
     <lightning-card title="Lightning Record Form" icon-name="utility:form">
@@ -6,6 +8,7 @@
             <lightning-record-form
                 object-api-name={objectApiName}
                 fields={fields}
+                onsuccess={handleSuccess}
             ></lightning-record-form>
 
         </div>
