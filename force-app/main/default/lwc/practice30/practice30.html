@@ -1,0 +1,27 @@
+<template>
+    
+    <lightning-card title="Component Composition" icon-name="standard:action_list_component">
+        <div class="slds-var-m-around_medium">
+
+            <!-- display practice3 component here -->
+
+            <c-practice3> </c-practice3>
+
+            <!-- <c-practice4> </c-practice4> -->
+
+            <c-practice30-child 
+                message="Hello there"
+            ></c-practice30-child>
+
+
+            <c-practice30-child 
+                message="Message from Parent"
+                num="100" 
+            ></c-practice30-child>
+
+            
+
+        </div>
+    </lightning-card>
+
+</template>
