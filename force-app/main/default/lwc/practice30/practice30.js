@@ -1,3 +1,10 @@
-import { LightningElement } from 'lwc';
+import { LightningElement } from "lwc";
+export default class Practice30 extends LightningElement {
 
-export default class Practice30 extends LightningElement {}
+    inputMsg; 
+
+    handleChange(event) {
+        this.inputMsg = event.target.value; 
+    }
+
+}

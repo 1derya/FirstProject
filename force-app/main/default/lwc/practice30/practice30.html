@@ -5,12 +5,23 @@
 
             <!-- display practice3 component here -->
 
-            <c-practice3> </c-practice3>
+            <!-- <c-practice3> </c-practice3> -->
 
             <!-- <c-practice4> </c-practice4> -->
 
+            <!-- create lightning input with 2 way data binding  -->
+            <lightning-input 
+                type="text" 
+                label="To The Child" 
+                value={inputMsg}    
+                onchange={handleChange}
+            ></lightning-input>
+
+
+            <!-- replace the hardcoded message value with what user typed above -->
             <c-practice30-child 
-                message="Hello there"
+                message={inputMsg}
+                num = "50"
             ></c-practice30-child>
 
 
