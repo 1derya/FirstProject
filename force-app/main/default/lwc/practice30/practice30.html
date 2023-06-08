@@ -30,6 +30,17 @@
                 num="100" 
             ></c-practice30-child>
 
+          <!-- all public properties of the child
+            can be assigned to value from parent as below
+            if you have camel case in your property name
+            it must be separated by - 
+            and all words must be lowercase -->
+            <c-practice30-child 
+                message="Message from Parent"
+                num="100"  
+                my-property="no uppercase"
+            ></c-practice30-child>
+
             
 
         </div>

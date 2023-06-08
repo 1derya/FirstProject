@@ -10,4 +10,7 @@ export default class Practice30Child extends LightningElement {
     @api
     num; 
 
+    @api 
+    myProperty;
+
 }
