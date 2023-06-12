@@ -12,12 +12,16 @@ export default class Practice32 extends LightningElement {
         firstName: 'Jon', 
         lastName : 'Snow'
     };
+
     @track
-    sports = ['soccer','football','basketball'];
+    sports = ['soccer','football','basketball']; 
+
     
     handleClick() {
         //this.lastName = 'Wick'; 
         this.person.lastName = 'Wick'; 
+        // if you do below you do not need @track
+        // because reassigning the property value will re-render the page 
         // this.person = {
         //     firstName: 'Jon', 
         //     lastName : 'Wick'
@@ -25,8 +29,10 @@ export default class Practice32 extends LightningElement {
     }
 
     changeFirstItem() {
-        this.sports[0] = 'CODING !!!';
-        this.sports = ['Co']
+         this.sports[0] = 'CODING !!!';
+        // if you do below you do not need @track
+        // because reassigning the property value will re-render the page 
+        // this.sports =  ['CODING !!!','football','basketball'];
     }
 
 }

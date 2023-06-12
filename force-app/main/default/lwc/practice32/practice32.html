@@ -9,16 +9,19 @@
             <lightning-button 
                 variant="brand" 
                 label="Click To Change"
-                onclick={handleClick}>
-                class="slds-var-m-bottom_large"
+                onclick={handleClick}
+
+            ></lightning-button>
+
+            
+
+            <p class="slds-var-m-top_large"> {sports} </p>
+            <lightning-button 
+                variant="brand" 
+                label="Change First Item"
+                onclick={changeFirstItem}>
             </lightning-button>
 
-            <p> {sports} </p>
-            <lightning-button 
-               variant="brand" 
-               label="Change First Item"
-               onclick={changeFirstItem}
-            ></lightning-button>
 
 
         </div>
