@@ -1,10 +1,12 @@
-import { LightningElement } from "lwc";
+import { LightningElement,api } from 'lwc';
 import BOOK_OBJECT from '@salesforce/schema/Book__c';
-
 
 export default class BookForm extends LightningElement {
 
-   recordId = 'a01Dn00000K7oQ6IAJ'
-   objectApiName= BOOK_OBJECT;
+    // this recordId will be passed from the parent 
+    @api
+    recordId; 
+
+    objectApiName = BOOK_OBJECT; 
 
 }
