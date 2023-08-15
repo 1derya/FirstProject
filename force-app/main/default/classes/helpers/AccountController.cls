@@ -4,6 +4,8 @@
  
 public with sharing class AccountController {
 
+   public static Boolean isFirstCall= true;
+
   /**
     * Create a static method called getAllAccounts
     * @return all the accounts in your salesforce org
